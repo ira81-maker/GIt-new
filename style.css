@@ -1,3 +1,33 @@
-Body{
-    background-color: aqua;
+ 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #88e0bf; /* Светлозелен фон */
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 900;
+}
+
+.bunny {
+    width: 300px; /* Ширина на зайчето */
+    height: 400px; /* Височина на зайчето */
+    background-image: url('https://seeklogo.com/images/B/bugs-bunny-logo-707C5BAE2F-seeklogo.com.png'); /* URL на изображение на зайче */
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    animation: jump 1s infinite; /* Анимация на скачане */
+}
+
+@keyframes jump {
+    0%, 100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 100px; /* Височина на скачането */
+    }
 }
